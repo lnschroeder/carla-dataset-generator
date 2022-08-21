@@ -1,7 +1,7 @@
 # CARLA dataset generator
 _CARLA dataset generator_ uses [CARLA simulator](https://carla.org/) to generate videos of a car driving around the simulation environment. Four visual modalities (RGB, optical flow, depth, instance segmentation) are extracted, as well as the motion data of all vehicles and pedestrians at every timestep
 
-![RGB, optical flow, depth, instance segmentation](4modalities.svg)
+![RGB, optical flow, depth, instance segmentation](modalities.svg)
 
 The dataset generator can be parameterized with a CSV file (see [generate_params.py](generate_params.py)) that contains a seed, the split name (train, test, validation), map name, framerate, duration, number of cars, number of pedestrians, weather and daytime, a speed limit factor, the cameras’ position, orientation, field of view, and resolution. The generator was designed to be fully deterministic.
 
