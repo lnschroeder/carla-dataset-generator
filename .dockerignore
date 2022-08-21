@@ -1,0 +1,14 @@
+# Ignore everything
+**
+
+# ... except
+!AdditionalMaps_*.tar.gz
+
+.idea/
+venv/
+.vscode/
+*__pycache__
+carla/carla-dataset/
+.ipynb_checkpoints/
+
+carla/AdditionalMaps_0.9.13.tar.gz
