@@ -3,7 +3,7 @@ _CARLA dataset generator_ uses [CARLA simulator](https://carla.org/) to generate
 
 ![RGB, optical flow, depth, instance segmentation](modalities.svg)
 
-The dataset generator can be parameterized with a CSV file (see [generate_params.py](generate_params.py)) that contains a seed, the split name (train, test, validation), map name, framerate, duration, number of cars, number of pedestrians, weather and daytime, a speed limit factor, the cameras’ position, orientation, field of view, and resolution. The generator was designed to be fully deterministic.
+The dataset generator can be parameterized with a CSV file (see [generate_params.py](src/generate_params.py)) that contains a seed, the split name (train, test, validation), map name, framerate, duration, number of cars, number of pedestrians, weather and daytime, a speed limit factor, the cameras’ position, orientation, field of view, and resolution. The generator was designed to be fully deterministic.
 
 One sample of the training set can be found at:
 https://tubcloud.tu-berlin.de/s/5ygs7dbMjDJWtqX
@@ -27,10 +27,10 @@ self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/f
     wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/AdditionalMaps_0.9.13.tar.gz
     docker build -t nschroeder/carla:0.9.13-v1 .
     ```
-4. Edit `generate_params.py` which will later generate a `.csv` file, which defines all parameters for each sample. The current configuration creates the `default4.csv` which was used for the main dataset of this thesis.
+4. Edit `src/generate_params.py` which will later generate a `.csv` file, which defines all parameters for each sample. The current configuration creates the `default4.csv` which was used for the main dataset of this thesis.
 5. Generate this `.csv`
     ```bash
-    `docker run --rm -v <ABSOLUTE_PATH_TO_THIS_REPO>:/mnt/scripts nschroeder/carla:0.9.13-v1 python3 generate_params.py <DATASET_NAME>`
+    `docker run --rm -v <ABSOLUTE_PATH_TO_THIS_REPO>/src/:/mnt/scripts nschroeder/carla:0.9.13-v1 python3 generate_params.py <DATASET_NAME>`
     ```
 6. Now a `<DATASET_NAME>.csv` should be in the `<ABSOLUTE_PATH_TO_THIS_REPO>`
 7. Start the CARLA server with display or headless:
@@ -50,7 +50,7 @@ self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/f
     # stop already running client containers
     docker container stop ccniklas && docker rm ccniklas
     
-    CODE_DIR=<ABSOLUTE_PATH_TO_THIS_REPO>
+    CODE_DIR=<ABSOLUTE_PATH_TO_THIS_REPO>/src/
     DATASET=<ABSOLUTE_PATH_TO_FOLDER_WHERE_DATASET_SHOULD_BE_SAVED>
     PARAM_NAME=<DATASET_NAME>
     
@@ -70,4 +70,4 @@ self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/f
     ```
 
 ## Entrypoint to code
-The `client.py` first gets called (see step 10).
+The `src/client.py` first gets called.
