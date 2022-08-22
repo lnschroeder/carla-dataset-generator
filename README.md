@@ -9,8 +9,8 @@ One sample of the training set can be found at:
 https://tubcloud.tu-berlin.de/s/5ygs7dbMjDJWtqX
 
 > **Note**
-> This project was part of my bachelor's thesis: [Evaluating multi-stream networks for
-self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/fg140/Main/Lehre/Master/bt_schroeder_blackened.pdf).
+> Please refer to my bachelor's thesis for details: [Evaluating multi-stream networks for
+self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/fg140/Main/Lehre/Master/bt_schroeder_blackened.pdf) 
 
 ## How to generate a CARLA dataset
 1. Clone this repo
