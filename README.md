@@ -10,7 +10,7 @@ https://tubcloud.tu-berlin.de/s/5ygs7dbMjDJWtqX
 
 > **Note**
 > Please refer to my bachelor's thesis for details: [Evaluating multi-stream networks for
-self-supervised representation learning](https://www.cv.tu-berlin.de/fileadmin/fg140/Main/Lehre/Master/bt_schroeder_blackened.pdf) 
+self-supervised representation learning](https://lnschroeder.github.io/projects/bachelors-thesis) 
 
 ## How to generate a CARLA dataset
 1. Clone this repo
